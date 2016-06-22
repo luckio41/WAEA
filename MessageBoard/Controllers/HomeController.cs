@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MessageBoard.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,17 @@ namespace MessageBoard.Controllers
         {
             ViewBag.Title = "Home Page";
 
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Contact(Contact contact)
+        {
             return View();
         }
     }

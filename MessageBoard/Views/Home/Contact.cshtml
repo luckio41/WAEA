@@ -1,0 +1,41 @@
+﻿@using MessageBoard.Models
+@model Contact
+
+@{
+    ViewBag.Title = "Contact";
+}
+
+<h2>Contact</h2>
+
+@using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+{
+    <table id="tbl-contact">
+        <tr>
+            <td>
+                <b>Name</b>
+            </td>
+            <td>@Html.TextBoxFor(x=>x.name)</td>
+        </tr>
+        <tr>
+            <td>
+                <b>Email</b>
+            </td>
+            <td>@Html.TextBoxFor(x=>x.email)</td>
+        </tr>
+        <tr>
+            <td>
+                <b>Web Site</b>
+            </td>
+            <td>@Html.TextBoxFor(x=>x.webPage)</td>
+        </tr>
+        <tr>
+            <td>
+                <b>Message</b>
+            </td>
+            <td>@Html.TextAreaFor(x=>x.message)</td>
+        </tr>
+        <tr>
+            <td><button type="submit">Ingresar</button></td>
+        </tr>
+    </table>
+}
